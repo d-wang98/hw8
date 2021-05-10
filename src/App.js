@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
+import SearchPage from "./SearchPage";
+import AnalyzePage from "./AnalyzePage";
+import { AnimatedSwitch } from "react-router-transition";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { ticker: "MSFT" };
+  }
+
+  updateTicker = e => {
+    this.setState({ ticker: e });
+  };
+
+  render() {
+    //pre-rendering code
+
+    return (
+      <Router>
+        <Route path="/">
+          <SearchPage updateTicker={this.updateTicker}></SearchPage>
+        </Route>
+        <Route path="/analyze">
+          <AnalyzePage ticker={this.state.ticker}></AnalyzePage>
+        </Route>
+      </Router>
+
+    );
+  }
 }
 
 export default App;
