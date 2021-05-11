@@ -25,6 +25,11 @@
 }
 .ticker-title {
   /* font-family: Arial, Helvetica, sans-serif; */
+  font-size: 30px;
+  display:flex;
+  justify-content: center;
+  padding:0px;
+  margin: 0px
 }
 body,
 html {
@@ -75,4 +80,9 @@ body {
   font-size: 30px;
   padding: 5px;
   margin: 5px
+}
+.unorderedList {
+  display:flex;
+  justify-content: center;
+  justify-items: center;
 }

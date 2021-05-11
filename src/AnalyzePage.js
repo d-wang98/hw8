@@ -88,7 +88,9 @@ class AnalyzePage extends React.Component {
 
     return (
       <div>
-        <div class="ticker-title">{this.props.ticker}</div>
+        <div>
+          <p class="ticker-title">{this.props.ticker}</p>
+        </div>
         <div class="graph-page">
           <div class="slide-bar-a">
             <div>

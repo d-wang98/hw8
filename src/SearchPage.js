@@ -27,21 +27,26 @@ class SearchPage extends React.Component {
         "PG",
         "NVDA",
         "VZ",
-        "ADBE"
+        "ADBE",
+        "CREE",
+        "AMD",
+        "NIO",
+        "HPQ",
+        "DELL"
       ],
-      searchListAlpha: {
-        "AAPL":"Apple Inc.",
-        "MSFT":"Microsoft Corporation",
-        "FB":"Facebook, Inc.",
-        "GOOGL":"Alphabet Inc.",
-        "TSLA":"Tesla, Inc.",
-        "BABA":"Alibaba Group Holding Ltd",
-        "JPM":"JPMorgan Chase & Co.",
-        "PG":"Procter & Gamble Co",
-        "NVDA":"NVIDIA Corporation",
-        "VZ":"Verizon Communications Inc.",
-        "ADBE":"Adobe Inc."
-      },
+      // searchListAlpha: {
+      //   "AAPL":"Apple Inc.",
+      //   "MSFT":"Microsoft Corporation",
+      //   "FB":"Facebook, Inc.",
+      //   "GOOGL":"Alphabet Inc.",
+      //   "TSLA":"Tesla, Inc.",
+      //   "BABA":"Alibaba Group Holding Ltd",
+      //   "JPM":"JPMorgan Chase & Co.",
+      //   "PG":"Procter & Gamble Co",
+      //   "NVDA":"NVIDIA Corporation",
+      //   "VZ":"Verizon Communications Inc.",
+      //   "ADBE":"Adobe Inc."
+      // },
      
       shouldRender: [
         "AAPL",
@@ -54,7 +59,12 @@ class SearchPage extends React.Component {
         "PG",
         "NVDA",
         "VZ",
-        "ADBE"
+        "ADBE",
+        "CREE",
+        "AMD",
+        "NIO",
+        "HPQ",
+        "DELL"
       ]
     };
   }

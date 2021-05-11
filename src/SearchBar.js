@@ -108,17 +108,19 @@ class List extends React.Component {
             class="input-class"
             placeholder="Search..."
           />
-          <ul>
-            {this.state.filtered.map(item => (
-              <li key={item}>
-                {item} &nbsp;
-                <span
-                  className="delete"
-                  onClick={() => this.props.delete(item)}
-                />
-              </li>
-            ))}
-          </ul>
+          <div className="unorderedList">
+            <ul>
+              {this.state.filtered.map(item => (
+                <li key={item}>
+                  {item} &nbsp;
+                  <span
+                    className="delete"
+                    onClick={() => this.props.delete(item)}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     );
