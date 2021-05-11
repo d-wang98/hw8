@@ -17,7 +17,7 @@ class ChartComponent extends React.Component {
     if (this.state == null) {
       return <div>Loading...</div>;
     } else {
-      this.props.handleData(this.state.data)
+      this.props.handleData(this.state.data);
     }
     return (
       <TypeChooser>

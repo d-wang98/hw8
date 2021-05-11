@@ -13,23 +13,22 @@
   display: grid;
   grid-template-columns: 50vw 50vw;
   align-items: center;
-
 }
 .slide-bar-a {
   justify-self: center;
   width: 30vw;
   padding-top: 10vw;
   height: 50vw;
-  display:grid;
+  display: grid;
   grid-template-rows: 30% 30% 30%;
-  fill:#ffffff;
+  fill: #ffffff;
 }
-.ticker-title{
+.ticker-title {
   /* font-family: Arial, Helvetica, sans-serif; */
-
 }
-body, html { 
-  font-family: Arial, Helvetica, sans-serif
+body,
+html {
+  font-family: Arial, Helvetica, sans-serif;
 }
 button {
   border: 1px solid #3d3d3d;
@@ -38,7 +37,7 @@ button {
   color: #3d3d3d;
   background-color: #f4f4f4;
   margin: 5px;
-  border-radius: 8px
+  border-radius: 8px;
 }
 button:hover {
   background-color: #e0e0e0;
@@ -47,5 +46,33 @@ button:hover {
 
 body {
   background-color: #f4f4f4;
-  
+}
+.search-bar {
+  display:flex;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+
+}
+
+.input-class {
+  display: flex;
+  border: none;
+  box-shadow:0px 3px 5px #c4c4c4;
+  height: 30px;
+  margin-top: 2vw;
+  width: 50vw;
+  justify-content: center;
+ 
+}
+.name {
+  display:flex;
+  justify-content: center;
+}
+
+.name-text {
+  font-size: 30px;
+  padding: 5px;
+  margin: 5px
 }

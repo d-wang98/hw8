@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 // import "bulma";
+import "./App.css";
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       list: [],
-      filtered:[]
+      filtered: []
     };
     this.addItem = this.addItem.bind(this);
     this.removeItem = this.removeItem.bind(this);
@@ -28,7 +29,7 @@ class Search extends React.Component {
       list.push(newItem.value);
       // Then we use that to set the state for list
       this.setState({
-        list: list,
+        list: list
       });
       // Finally, we need to reset the form
       newItem.classList.remove("is-danger");
@@ -52,16 +53,20 @@ class Search extends React.Component {
     });
     // Set state to list
     this.setState({
-      list: list,
+      list: list
     });
   }
 
   render() {
     return (
-      <div style={{width: "100%"}}>
-        <div style={{width: "100%"}} className="container">
+      <div>
+        <div className="container">
           <section>
-            <List filterFunction={this.props.filterFunction} items={this.state.list} delete={this.removeItem} />
+            <List
+              filterFunction={this.props.filterFunction}
+              items={this.state.list}
+              delete={this.removeItem}
+            />
           </section>
         </div>
       </div>
@@ -73,44 +78,48 @@ class List extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filtered: [],
+      filtered: []
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
     this.setState({
-      filtered: this.props.items,
+      filtered: this.props.items
     });
   }
 
   handleChange(e) {
-    console.log("VALUE OF SEARCH BAR", e.target.value)
-    this.props.filterFunction(e.target.value.toUpperCase())
+    console.log("VALUE OF SEARCH BAR", e.target.value);
+    this.props.filterFunction(e.target.value.toUpperCase());
   }
 
   render() {
     return (
-      <div style={{width: "100%", margin: "0px", padding: "0px"}}>
-        <input
-          type="text"
-          className="input search-bar"
-          onChange={this.handleChange}
-          style={{border:"none", boxShadow:"0px 3px 5px #c4c4c4", height:"30px"}}
-          placeholder="Search..."
-          
-        />
-        <ul>
-          {this.state.filtered.map((item) => (
-            <li key={item}>
-              {item} &nbsp;
-              <span
-                className="delete"
-                onClick={() => this.props.delete(item)}
-              />
-            </li>
-          ))}
-        </ul>
+      <div>
+        <div class="name">
+          <p class="name-text">Stock Evaluator</p>
+        </div>
+        <div class="search-bar">
+          <input
+            type="text"
+            className="input search-bar"
+            onChange={this.handleChange}
+            class="input-class"
+            placeholder="Search..."
+          />
+          <ul>
+            {this.state.filtered.map(item => (
+              <li key={item}>
+                {item} &nbsp;
+                <span
+                  className="delete"
+                  onClick={() => this.props.delete(item)}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }
